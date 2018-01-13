@@ -18,10 +18,13 @@ class page{
         //configurando o rem tpl
        	$config = array(
                            //aponta a pasta root do projeto
-	 "tpl_dir"       => $_SERVER["DOCUMENT_ROOT"]."/views/",
-	 "cache_dir"     => $_SERVER["DOCUMENT_ROOT"]."/views-cache/",
-	"debug"         => false // set to false to improve the speed
+                                  
+                           
+	 "tpl_dir"       => $_SERVER["DOCUMENT_ROOT"]."/cursophp/cursoudmy/ecomerce/views/",
+	 "cache_dir"     => $_SERVER["DOCUMENT_ROOT"]."/cursophp/cursoudmy/ecomerce/views-cache/",
+	 "debug"         => false // set to false to improve the speed
 	);
+        
 
 	Tpl::configure( $config );
         
@@ -31,6 +34,7 @@ class page{
         
         //desenhando o teplate na tela
         //adicionando o cabeçalho
+        
         $this->tpl->draw("header");
         
     }

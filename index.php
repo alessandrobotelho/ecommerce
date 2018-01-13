@@ -5,14 +5,15 @@ require_once("vendor/autoload.php");
 use Slim\Slim;
 use Hcode\page;
 
-$app = new \Slim\Slim();
+$app = new Slim();
 
 $app->config('debug', true);
 
 $app->get('/', function() {
     
-    $page = new page();
-    $page->setTpl("index");
+  $page = new page();
+  $page->setTpl("index");
+  //echo "ok";
 
 });
 
