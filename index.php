@@ -2,9 +2,9 @@
 
 require_once("vendor/autoload.php");
 
-use Slim\Slim;
-use Hcode\page;
-use Hcode\PageAdmin;
+use \Slim\Slim;
+use \Hcode\page;
+use \Hcode\PageAdmin;
 
 $app = new Slim();
 
