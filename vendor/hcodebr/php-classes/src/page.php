@@ -15,7 +15,8 @@ class page{
         //Mesclando os arrays
         $this->options = array_merge($this->defaults,$opts);
         
-        //configurando o rem tpl
+        /*configurando o rem tpl funcionando pelo localhost
+        
        	$config = array(
                            //aponta a pasta root do projeto
                                   
@@ -24,8 +25,18 @@ class page{
 	 "cache_dir"     => $_SERVER["DOCUMENT_ROOT"]."/cursophp/cursoudmy/ecomerce/views-cache/",
 	 "debug"         => false // set to false to improve the speed
 	);
+        */
         
-
+        //configurando o rem tpl funcionando pelo virtualhost
+       	$config = array(
+                           //aponta a pasta root do projeto
+                                  
+                           
+	 "tpl_dir"       => $_SERVER["DOCUMENT_ROOT"].$tpl_dir,
+	 "cache_dir"     => $_SERVER["DOCUMENT_ROOT"]."views-cache/",
+	 "debug"         => false // set to false to improve the speed
+	);
+        
 	Tpl::configure( $config );
         
         $this->tpl = new Tpl;
